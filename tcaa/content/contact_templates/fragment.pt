@@ -1,0 +1,54 @@
+<div class="contactpage"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="tcaa.content"
+    tal:define="custom_style context/@@custom-page-style"
+    tal:attributes="style custom_style/page_style">
+
+    <div tal:condition="context/content" tal:attributes="style custom_style/content_style; class custom_style/content_class;"
+           tal:content="structure context/content/output" />
+
+    <div tal:attributes="class custom_style/content_class;">
+        <div class="fl social" tal:define="social_links view/socialLinks">
+           <h3>Contact Us Direct</h3>
+           <div id="contact-form">
+            <form action=".">
+                <table>
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input id="name" type="text" name="name"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input id="email" type="text" name="email"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="message">Message:</label></td>
+                        <td><textarea id="message" name="message" rows="4"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            Your contact details and message
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" name="submit" value="send"/></td>
+                    </tr>
+                </table>
+            </form>
+           </div>
+            <div id="social-links" tal:condition="social_links">
+            <h3>Follow Us</h3>
+            <p>
+                <a tal:repeat="link social_links"
+                   tal:attributes="href link/url"
+                   tal:content="link/title">title here</a>
+            </p>
+            </div>
+     
+        </div>
+    </div>
+</div>

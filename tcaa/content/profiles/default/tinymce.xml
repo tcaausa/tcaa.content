@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<object>
+    <layout>
+        <styles purge="False">
+            <element value="Video (center)|div|autoFlowPlayer video image-center"/>
+            <element value="Audio (center)|div|autoFlowPlayer audio image-center"/>
+        </styles>
+    </layout>
+    <resourcetypes>
+        <linkable>
+            <element value="tcaa.content.Section" />
+            <element value="tcaa.content.Page" />
+            <element value="tcaa.content.Homepage" />
+            <element value="tcaa.content.LinksPage" />
+            <element value="tcaa.content.ContactPage" />
+        </linkable>
+        <containsanchors>
+            <element value="tcaa.content.Page" />            
+            <element value="tcaa.content.Homepage" />         
+            <element value="tcaa.content.LinksPage" />         
+            <element value="tcaa.content.ContactPage" />     
+        </containsanchors>
+        <containsobjects>
+            <element value="tcaa.content.Section" />
+        </containsobjects>
+    </resourcetypes>
+</object>

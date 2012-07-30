@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<object>
+    <hidden manager="plone.htmlhead" skinname="Sunburst Theme">
+        <viewlet name="plone.htmlhead.dublincore" />
+    </hidden>
+    <order manager="plone.htmlhead" skinname="Sunburst Theme">
+        <viewlet name="plone.htmlhead.title" />
+        <viewlet name="tcaa.htmlhead.dublincore" />
+    </order>
+</object>

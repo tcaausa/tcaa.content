@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rolemap>
+    <permissions>
+        <permission name="TCAA: Add Page" acquire="False">
+            <role name="Manager" />
+            <role name="Site Administrator" />
+        </permission>
+        <permission name="TCAA: Add Homepage" acquire="False">
+            <role name="Manager" />
+            <role name="Site Administrator" />
+        </permission>
+        <permission name="TCAA: Add Section" acquire="False">
+            <role name="Manager" />
+            <role name="Site Administrator" />
+        </permission>
+         <permission name="TCAA: Add Links Page" acquire="False">
+            <role name="Manager" />
+            <role name="Site Administrator" />
+        </permission>
+        <permission name="TCAA: Add Contact Page" acquire="False">
+            <role name="Manager" />
+            <role name="Site Administrator" />
+        </permission>
+ 
+    </permissions>
+
+</rolemap>

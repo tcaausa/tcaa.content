@@ -1,0 +1,13 @@
+<div class="page"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="tcaa.content"
+      tal:define="custom_style context/@@custom-page-style"
+      tal:attributes="style custom_style/page_style"
+      >
+
+       <div tal:condition="context/content" tal:attributes="style custom_style/content_style; class custom_style/content_class;"
+           tal:content="structure context/content/output" />
+                          
+</div>

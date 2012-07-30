@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<portlets>
+    <portlet
+        addview="tcaa.Navigation"
+        title="TCAA Navigation"
+        description="A portlet to show navigation for the TCAA theme"
+    />
+</portlets>

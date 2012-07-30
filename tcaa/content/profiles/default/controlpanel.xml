@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<object
+    name="portal_controlpanel"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="tcaa.content">
+
+    <configlet
+        title="TCAA Settings"
+        action_id="tcaa"
+        appId="tcaa"
+        category="Products"
+        condition_expr=""
+        url_expr="string:${portal_url}/@@tcaa-controlpanel"
+        icon_expr="string:$portal_url/++theme++tcaa.theme/favicon.ico"
+        visible="True"
+        i18n:attributes="title">
+            <permission>TCAA: Change Settings</permission>
+    </configlet>
+</object>

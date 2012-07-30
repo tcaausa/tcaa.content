@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="tcaa.content">
+
+<head>
+    <metal:headjs fill-slot="javascript_head_slot">
+        <script tal:replace="structure context/@@pagedata"></script>
+        <script type="text/javascript" src="http://use.typekit.com/zze7hxs.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+    </metal:headjs>
+</head>
+<body> 
+<metal:content-core fill-slot="content-core">
+    <metal:content-core define-macro="content-core">
+        <tal:assets tal:define="assets context/@@assets;">
+        <div tal:condition="assets/background" id="dummy_body" 
+        tal:attributes="style string:background:url(${assets/background}) repeat scroll 0 0;">
+        <!-- used to pass body style up to the styling engine -->
+        </div>
+        <div tal:condition="assets/logo" id="dummy_logo"
+            tal:attributes="style string:background:url(${assets/logo}) no-repeat scroll 0 0 transparent;">
+            <!-- used to pass logo style up to the styling engine -->
+        </div>
+        </tal:assets>
+
+
+        <div class="scroll-sect-content">
+
+            <div class="scroll-page">
+                <div tal:replace="structure context/@@fragment" />
+            </div>
+        </div>
+        
+        <div class="scroll-sect-footer">
+            <div class="fl"><span class="scroll-sect-title" tal:content="context/Title"/></div>
+            <div class="fr">
+                <ul class="scroll-sect-menu" 
+                    tal:define="siblings context/@@section-siblings">
+                    <li tal:repeat="sibling siblings">
+                    <a tal:attributes="href sibling/url; 
+                        class python:sibling['current'] and 'active' or '';">
+                        <span tal:content="sibling/title"/></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </metal:content-core>
+</metal:content-core>
+</body>
+</html>

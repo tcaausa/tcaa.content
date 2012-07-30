@@ -1,0 +1,22 @@
+<div class="linkspage"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="tcaa.content"
+      tal:define="custom_style context/@@custom-page-style"
+      tal:attributes="style custom_style/page_style"
+      >
+
+    <div class="featured-pages">
+        <div tal:condition="view/hasFeaturedPages">
+            <tal:loop tal:repeat="page view/featuredPages">
+            <div tal:attributes="class python:'fl' + ((repeat['page'].index % 3 == 0) and ' newrow' or '')">
+                <a tal:attributes="href page/url; title page/description">
+                    <img tal:replace="structure page/imageTag" />
+                    <div class="featured-title" tal:content="page/title" />
+                </a>
+            </div>
+            </tal:loop>
+        </div>
+    </div>
+</div>

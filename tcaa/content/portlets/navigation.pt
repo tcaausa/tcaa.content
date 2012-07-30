@@ -1,0 +1,49 @@
+<dl class="portlet portletTCAANavigation"
+    i19n:domain="tcaa.content">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        TCAA Navigation
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem">
+        <ul class="top" id="tcaa-navigation">
+            <div class="bar" />
+            <tal:sections tal:repeat="section view/tree">
+        <li><a tal:attributes="href section/url"
+               tal:content="section/title">link</a>
+            <tal:pages tal:condition="section/pages">
+            <ul class="sub">
+                <tal:page tal:repeat="page section/pages">
+                    <li>
+                        <a tal:attributes="href page/url"
+                           tal:content="page/title">link</a>
+                    </li>
+                </tal:page>
+            </ul>
+            </tal:pages>
+            </li>
+        </tal:sections>
+        <div class="bar" />
+        </ul>
+        <div id="page-twitter">
+            <h2>Twitter</h2>
+            <ul id="twitter_update_list"></ul>
+        </div>
+        <div id="page-channels">
+            <ul>
+                <li class="channel-email"><a tal:attributes="href view/email">Email</a></li>
+                <li class="channel-twitter"><a tal:attributes="href view/twitter" target="_blank">Twitter</a></li>
+                <li class="channel-linkedin"><a tal:attributes="href view/linkedin" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </dd>
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" tal:attributes="src view/twitter_feed"></script>

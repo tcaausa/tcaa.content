@@ -1,0 +1,2 @@
+<meta tal:repeat="keyval viewlet/metatags"
+      tal:attributes="content python:keyval['content']; name python:keyval['name'];" />

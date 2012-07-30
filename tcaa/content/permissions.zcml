@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="tcaa.content">
+
+    <permission id="tcaa.AddPage"           title="TCAA: Add Page" />
+    <permission id="tcaa.AddHomepage"       title="TCAA: Add Homepage" />
+    <permission id="tcaa.AddSection"        title="TCAA: Add Section" />
+    <permission id="tcaa.AddLinksPage"      title="TCAA: Add Links Page" />
+    <permission id="tcaa.AddContactPage"    title="TCAA: Add Contact Page" />
+    <permission id="tcaa.AddAssets"         title="TCAA: Add Assets" />
+    <permission id="tcaa.ChangeSettings"    title="TCAA: Change Settings" />
+
+</configure>
