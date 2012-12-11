@@ -82,7 +82,7 @@ class Renderer(base.Renderer):
         settings = self._get_tcaa_settings()
         if settings == None:
             return ''
-        return "http://twitter.com/statuses/user_timeline/%s.json?callback=twitterCallback2&count=1" % (settings.twitter_account,)
+        return "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=%s&callback=twitterCallback2&count=1" % (settings.twitter_account,)
    
     @memoize
     def email(self):
