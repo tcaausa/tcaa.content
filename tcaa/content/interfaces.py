@@ -1,9 +1,11 @@
 from zope.interface import Interface
 from zope import schema
 
+
 class ITCAAContentish(Interface):
     """Marker interface for TCAA content items
     """
+
 
 class ITCAASettings(Interface):
     """Describes registry records
@@ -34,4 +36,8 @@ class ITCAASettings(Interface):
             description=u"The Linkedin account to link to from the navigation",
             required=False,
         )
-
+    html_title = schema.TextLine(
+            title=u"HTML Title",
+            description=u"The text that will appear in the HTML head title element",
+            required=False,
+        )
