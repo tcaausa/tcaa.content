@@ -1,0 +1,1 @@
+<title tal:content="structure viewlet/site_title">Site Title</title>
