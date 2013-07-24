@@ -215,6 +215,5 @@ class CustomPageStyle(grok.View):
         #    element_class += "white-text ";
 
         if context.textBackground:
-            element_class += "text-background ";
+            element_class += "text-background "
         return element_class
-
