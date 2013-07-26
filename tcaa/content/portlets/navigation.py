@@ -69,10 +69,6 @@ class Renderer(base.Renderer):
         return self._data()
 
     @memoize
-    def twitter_feed(self):
-        return "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=%s&callback=twitterCallback2&count=1" % self.settings.forName('twitter_account', '')
-
-    @memoize
     def email(self):
         return 'mailto:%s' % self.settings.forName('email_account', '')
 

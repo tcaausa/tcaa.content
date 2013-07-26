@@ -27,10 +27,6 @@
         </tal:sections>
         <div class="bar" />
         </ul>
-        <div id="page-twitter">
-            <h2>Twitter</h2>
-            <ul id="twitter_update_list"></ul>
-        </div>
         <div id="page-channels">
             <ul>
                 <li class="channel-email"><a tal:attributes="href view/email">Email</a></li>
@@ -46,4 +42,3 @@
 </dl>
 
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-<script type="text/javascript" tal:attributes="src view/twitter_feed"></script>
