@@ -114,6 +114,10 @@ class Renderer(base.Renderer):
                 page_brains = pc(q)
                 first_page_url = None
                 for page in page_brains:
+                    exclude = bool(getattr(page, 'exclude_from_nav', False))
+                    if exclude:
+                        continue
+
                     url = "/%s/%s" % (branch.id, page.id)
                     if first_page_url == None:
                         first_page_url = url
